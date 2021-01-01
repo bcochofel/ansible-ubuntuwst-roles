@@ -36,6 +36,21 @@ pre-commit run --all-files
 
 This repository should be used from a Python Virtual Environment.
 
+## Install Podman
+
+Molecule can use [podman](https://podman.io/) for testing. If you want to use `podman` you need to install it:
+
+```bash
+# Ubuntu (19.10, 19.04 and 18.04)
+. /etc/os-release
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/x${NAME}_${VERSION_ID}/ /' > /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list"
+wget -nv https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable/x${NAME}_${VERSION_ID}/Release.key -O Release.key
+
+sudo apt-key add - < Release.key
+sudo apt-get update -qq
+sudo apt-get -y install podman
+```
+
 ## Setup Python 3
 
 Make sure versions are up-to-date:
@@ -85,7 +100,7 @@ If you don't want to use the `requirements.txt` file you can install both `ansib
 
 ```bash
 python3 -m pip install wheel
-python3 -m pip install molecule docker ansible
+python3 -m pip install "molecule[lint,docker,podman,ansible]"
 ```
 
 ## requirements.txt
@@ -103,11 +118,55 @@ after installing all the 3rd party packages you want.
 Now that you have your environment setup you can create a new role with using:
 
 ```bash
-molecule init role -r ansible-apache -d docker
+molecule init role ansible-apache -d docker
 ```
 
-* -r: name of the role
-* -d: driver to use
+This will use the docker driver.
+
+### Editing molecule template
+
+Edit the file `<new role>/molecule/molecule.yml` according to what you want.
+You can use this as base:
+
+```yaml
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: instance
+    image: "geerlingguy/docker-ubuntu2004-ansible:latest"
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    pre_build_image: true
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
+lint: |
+  set -e
+  yamllint .
+  ansible-lint .
+```
+
+Edit the file `<new role>/meta/main.yml` according to what you want.
+You can use this as base:
+
+```yaml
+galaxy_info:
+  author: Bruno Cochofel
+  description: Install some base utilities
+...
+  license: MIT
+...
+  platforms:
+    - name: ubuntu
+      versions:
+        - 20.04
+...
+```
 
 test the new role by running:
 
@@ -118,4 +177,5 @@ molecule test
 
 # References
 
+* [Testing your Ansible roles with Molecule](https://www.jeffgeerling.com/blog/2018/testing-your-ansible-roles-molecule)
 * [How to test Ansible Roles with Molecule](https://www.digitalocean.com/community/tutorials/how-to-test-ansible-roles-with-molecule-on-ubuntu-18-04)
