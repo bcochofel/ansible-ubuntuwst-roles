@@ -85,7 +85,7 @@ If you don't want to use the `requirements.txt` file you can install both `ansib
 
 ```bash
 python3 -m pip install wheel
-python3 -m pip install molecule docker
+python3 -m pip install molecule docker ansible
 ```
 
 ## requirements.txt
