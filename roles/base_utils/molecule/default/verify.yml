@@ -1,0 +1,44 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: true
+  vars:
+    list_of_packages:
+      - "'imagemagick' in ansible_facts.packages"
+      - "'tree' in ansible_facts.packages"
+      - "'curl' in ansible_facts.packages"
+      - "'wget' in ansible_facts.packages"
+      - "'git' in ansible_facts.packages"
+      - "'unzip' in ansible_facts.packages"
+      - "'apt-file' in ansible_facts.packages"
+      - "'mc' in ansible_facts.packages"
+      - "'exuberant-ctags' in ansible_facts.packages"
+      - "'ack-grep' in ansible_facts.packages"
+      - "'silversearcher-ag' in ansible_facts.packages"
+      - "'ripgrep' in ansible_facts.packages"
+      - "'zsh' in ansible_facts.packages"
+      - "'zsh-syntax-highlighting' in ansible_facts.packages"
+      - "'ttf-ancient-fonts' in ansible_facts.packages"
+      - "'fonts-powerline' in ansible_facts.packages"
+      - "'fonts-font-awesome' in ansible_facts.packages"
+      - "'terminator' in ansible_facts.packages"
+      - "'tilix' in ansible_facts.packages"
+      - "'tmux' in ansible_facts.packages"
+      - "'build-essential' in ansible_facts.packages"
+      - "'libssl-dev' in ansible_facts.packages"
+      - "'libffi-dev' in ansible_facts.packages"
+      - "'python3-pip' in ansible_facts.packages"
+      - "'python3-dev' in ansible_facts.packages"
+      - "'python3-venv' in ansible_facts.packages"
+      - "'golang' in ansible_facts.packages"
+      - "'vim' in ansible_facts.packages"
+      - "'neovim' in ansible_facts.packages"
+  tasks:
+    - name: Gather the package manager facts
+      package_facts:
+        manager: auto
+    - name: Assert that following packages are installed
+      assert:
+        that: "{{ list_of_packages }}"
