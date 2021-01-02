@@ -1,0 +1,28 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: true
+  vars:
+    list_of_packages:
+      - "'i3' in ansible_facts.packages"
+      - "'i3blocks' in ansible_facts.packages"
+      - "'i3lock' in ansible_facts.packages"
+      - "'i3lock-fancy' in ansible_facts.packages"
+      - "'i3status' in ansible_facts.packages"
+      - "'xautolock' in ansible_facts.packages"
+      - "'conky' in ansible_facts.packages"
+      - "'feh' in ansible_facts.packages"
+      - "'rofi' in ansible_facts.packages"
+      - "'scrot' in ansible_facts.packages"
+      - "'pulseaudio-utils' in ansible_facts.packages"
+      - "'xbacklight' in ansible_facts.packages"
+      - "'python-dbus' in ansible_facts.packages"
+  tasks:
+    - name: Gather the package manager facts
+      package_facts:
+        manager: auto
+    - name: Assert that following packages are installed
+      assert:
+        that: "{{ list_of_packages }}"
