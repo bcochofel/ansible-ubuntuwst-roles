@@ -120,3 +120,4 @@ pip freeze > requirements.txt
 * [Molecule Documentation](https://molecule.readthedocs.io/en/latest/index.html)
 * [Molecule Getting Started Guide](https://molecule.readthedocs.io/en/latest/getting-started.html)
 * [Use custom Ansible role templates with Molecule](https://megamorf.gitlab.io/2018/12/18/use-custom-role-templates-with-molecule/)
+* [Ansible is now default test verifier in Molecule](https://loncar.net/posts/ansible-is-now-default-test-verifier-in-molecule/)
