@@ -1,0 +1,31 @@
+---
+# tasks file for cloud_tools
+
+- name: print distro info
+  debug: msg="{{ ansible_os_family }} > {{ ansible_distribution }} {{ ansible_distribution_version }}"
+
+- name: Include checks/asserts
+  include: asserts.yml
+
+- name: Install aws-cli
+  apt:
+    name: "{{ aws_cli_pkg_name }}"
+    state: present
+    update_cache: yes
+
+- name: Import Microsoft APT repository key
+  apt_key:
+    url: "{{ ms_repo_key_url }}"
+    state: present
+
+- name: Add the Microsoft APT repository
+  apt_repository:
+    repo: "deb [arch=amd64] {{ ms_repo_baseurl }} {{ansible_distribution_release}} main"
+    filename: "{{ azure_cli_pkg_name }}"
+    state: present
+
+- name: Install azure-cli
+  apt:
+    name: "{{ azure_cli_pkg_name }}"
+    state: present
+    update_cache: yes

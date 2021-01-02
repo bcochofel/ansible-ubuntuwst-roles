@@ -1,0 +1,7 @@
+---
+# defaults file for cloud_tools
+aws_cli_pkg_name: awscli
+
+azure_cli_pkg_name: azure-cli
+ms_repo_key_url: https://packages.microsoft.com/keys/microsoft.asc
+ms_repo_baseurl: https://packages.microsoft.com/yumrepos/azure-cli/
