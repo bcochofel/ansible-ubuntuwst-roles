@@ -121,6 +121,58 @@ molecule init role -d docker <role-name>
 
 * -d: docker driver
 
+# How to test the Role
+
+Change to the `role` folder.
+
+## Create instance
+
+```bash
+molecule create
+```
+
+## List instances
+
+```bash
+molecule list
+```
+
+## Test Role against instance
+
+```bash
+molecule converge
+```
+
+## Manual inspection
+
+```bash
+molecule login
+```
+
+## Run Verification steps
+
+```bash
+molecule verify
+```
+
+## Run Lint steps
+
+```bash
+molecule lint
+```
+
+## Destroy instance
+
+```bash
+molecule destroy
+```
+
+## Run all tests
+
+```bash
+molecule test
+```
+
 # References
 
 * [Molecule Documentation](https://molecule.readthedocs.io/en/latest/index.html)
