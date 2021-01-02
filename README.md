@@ -36,21 +36,6 @@ pre-commit run --all-files
 
 This repository should be used from a Python Virtual Environment.
 
-## Install Podman
-
-Molecule can use [podman](https://podman.io/) for testing. If you want to use `podman` you need to install it:
-
-```bash
-# Ubuntu (19.10, 19.04 and 18.04)
-. /etc/os-release
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/x${NAME}_${VERSION_ID}/ /' > /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list"
-wget -nv https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable/x${NAME}_${VERSION_ID}/Release.key -O Release.key
-
-sudo apt-key add - < Release.key
-sudo apt-get update -qq
-sudo apt-get -y install podman
-```
-
 ## Setup Python 3
 
 Make sure versions are up-to-date:
@@ -100,7 +85,7 @@ If you don't want to use the `requirements.txt` file you can install both `ansib
 
 ```bash
 python3 -m pip install wheel pytest testinfra flake8 pytest-testinfra pytest-flake8 cookiecutter
-python3 -m pip install "molecule[ansible,lint,docker,podman]"
+python3 -m pip install "molecule[ansible,lint,docker]"
 ```
 
 generate `requirements.txt` file using the following command:
