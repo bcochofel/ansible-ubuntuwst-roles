@@ -1,0 +1,16 @@
+---
+# defaults file for i3wm
+i3wm_packages:
+  - i3
+  - i3blocks
+  - i3lock
+  - i3lock-fancy
+  - i3status
+  - xautolock
+  - conky
+  - feh
+  - rofi
+  - scrot
+  - pulseaudio-utils
+  - xbacklight
+  - python-dbus
