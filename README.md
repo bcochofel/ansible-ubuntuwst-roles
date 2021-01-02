@@ -113,7 +113,28 @@ pip freeze > requirements.txt
 
 ## Ansible Role using custom Cookiecutter template
 
+You can use custom [`cookiecutter`](https://github.com/cookiecutter/cookiecutter) templates with some pre-defined tasks or variables.
+You can use [this](https://github.com/bcochofel/molecule-cookiecutter) repo for reference.
+
+Go to the `roles` folder and execute the following commands:
+
+```bash
+cd roles/
+cookiecutter gh:bcochofel/molecule-cookiecutter
+```
+
+answer the on-screen questions.
+
 ## Ansible Role using default template
+
+To use the default template execute the following commands:
+
+```bash
+cd roles/
+molecule init role -d docker <role-name>
+```
+
+* -d: docker driver
 
 # References
 
