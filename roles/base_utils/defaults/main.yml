@@ -10,7 +10,7 @@ ubuntu_packages:
   - apt-file
   - mc
   - exuberant-ctags
-  - ack-grep
+  - ack
   - silversearcher-ag
   - ripgrep
   - zsh

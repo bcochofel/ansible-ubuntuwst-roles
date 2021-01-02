@@ -15,7 +15,7 @@
       - "'apt-file' in ansible_facts.packages"
       - "'mc' in ansible_facts.packages"
       - "'exuberant-ctags' in ansible_facts.packages"
-      - "'ack-grep' in ansible_facts.packages"
+      - "'ack' in ansible_facts.packages"
       - "'silversearcher-ag' in ansible_facts.packages"
       - "'ripgrep' in ansible_facts.packages"
       - "'zsh' in ansible_facts.packages"
