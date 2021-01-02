@@ -32,6 +32,35 @@ You can force all the hooks to run with the following command:
 pre-commit run --all-files
 ```
 
+# TL;DR
+
+If you just want to run the playbooks on this repo you just need to install `ansible` and configure it to use
+on the remote hosts you want to.
+
+Check [this](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) link for more info on how
+to install `ansible`.
+
+List of playbooks available:
+
+| playbook | description |
+| -------- | ----------- |
+| base_utils.yml | Install base utilities and pip packages |
+| i3wm.yml | Install i3 Window Manager |
+
+**NOTE: Before running the playbooks ensure that your `inventory` is configured.**
+
+run the playbooks:
+
+```bash
+ansible-playbook <playbook.yml>
+```
+
+to run the `i3wm.yml` playbook on `localhost` execute:
+
+```bash
+ansible-playbook -i localhost, i3wm.yml
+```
+
 # Requirements
 
 This repository should be used from a Python Virtual Environment.
