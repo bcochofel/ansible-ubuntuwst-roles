@@ -30,3 +30,19 @@ ubuntu_packages:
   - golang
   - vim
   - neovim
+pip_packages:
+  - pytest
+  - pynvim
+  - flake8
+  - pylint
+  - isort
+  - yamllint
+  - ansible-lint
+  - jedi
+  - autopep8
+  - yapf
+  - docformatter
+  - proselint
+  - saws
+  - autorandr
+  - testinfra

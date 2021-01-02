@@ -12,3 +12,7 @@
     name: "{{ ubuntu_packages }}"
     state: present
     update_cache: yes
+
+- name: Install pip packages
+  pip:
+    name: "{{ pip_packages }}"
