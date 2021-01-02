@@ -103,77 +103,17 @@ python3 -m pip install wheel pytest testinfra flake8 pytest-testinfra pytest-fla
 python3 -m pip install "molecule[ansible,lint,docker,podman]"
 ```
 
-## requirements.txt
-
-This file is generated using the following command:
+generate `requirements.txt` file using the following command:
 
 ```bash
 pip freeze > requirements.txt
 ```
 
-after installing all the 3rd party packages you want.
+# Create new Ansible Role
 
-## Creating a role in molecule
+## Ansible Role using custom Cookiecutter template
 
-Now that you have your environment setup you can create a new role with using:
-
-```bash
-molecule init role ansible-apache -d docker
-```
-
-This will use the docker driver.
-
-### Editing molecule template
-
-Edit the file `<new role>/molecule/molecule.yml` according to what you want.
-You can use this as base:
-
-```yaml
----
-dependency:
-  name: galaxy
-driver:
-  name: docker
-platforms:
-  - name: instance
-    image: "geerlingguy/docker-ubuntu2004-ansible:latest"
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    pre_build_image: true
-provisioner:
-  name: ansible
-verifier:
-  name: ansible
-lint: |
-  set -e
-  yamllint .
-  ansible-lint .
-```
-
-Edit the file `<new role>/meta/main.yml` according to what you want.
-You can use this as base:
-
-```yaml
-galaxy_info:
-  author: Bruno Cochofel
-  description: Install some base utilities
-...
-  license: MIT
-...
-  platforms:
-    - name: ubuntu
-      versions:
-        - 20.04
-...
-```
-
-test the new role by running:
-
-```bash
-cd ansible-apache
-molecule test
-```
+## Ansible Role using default template
 
 # References
 
