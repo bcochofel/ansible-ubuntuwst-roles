@@ -99,8 +99,8 @@ You now have python virtual environment with all the dependencies installed and 
 If you don't want to use the `requirements.txt` file you can install both `ansible` and `molecule` using the following commands:
 
 ```bash
-python3 -m pip install wheel
-python3 -m pip install "molecule[lint,docker,podman,ansible]"
+python3 -m pip install wheel pytest testinfra flake8 pytest-testinfra pytest-flake8
+python3 -m pip install "molecule[ansible,lint,docker,podman]"
 ```
 
 ## requirements.txt
