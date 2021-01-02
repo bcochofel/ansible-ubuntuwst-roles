@@ -1,7 +1,0 @@
----
-- name: Converge
-  hosts: all
-  tasks:
-    - name: "Include base_utils"
-      include_role:
-        name: "base_utils"
