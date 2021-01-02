@@ -7,6 +7,12 @@
 - name: Include checks/asserts
   include: asserts.yml
 
+- name: Install dependencies
+  apt:
+    name: "{{ dependencies_pkg }}"
+    state: present
+    update_cache: yes
+
 - name: Install aws-cli
   apt:
     name: "{{ aws_cli_pkg_name }}"

@@ -8,6 +8,11 @@
     list_of_packages:
       - "'awscli' in ansible_facts.packages"
       - "'azure-cli' in ansible_facts.packages"
+      - "'ca-certificates' in ansible_facts.packages"
+      - "'curl' in ansible_facts.packages"
+      - "'apt-transport-https' in ansible_facts.packages"
+      - "'lsb-release' in ansible_facts.packages"
+      - "'gnupg' in ansible_facts.packages"
   tasks:
     - name: Gather the package manager facts
       package_facts:

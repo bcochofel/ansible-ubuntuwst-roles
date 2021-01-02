@@ -1,5 +1,12 @@
 ---
 # defaults file for cloud_tools
+dependencies_pkg:
+  - ca-certificates
+  - curl
+  - apt-transport-https
+  - lsb-release
+  - gnupg
+
 aws_cli_pkg_name: awscli
 
 azure_cli_pkg_name: azure-cli
