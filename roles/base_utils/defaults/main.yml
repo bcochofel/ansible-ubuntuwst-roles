@@ -46,3 +46,4 @@ pip_packages:
   - saws
   - autorandr
   - testinfra
+  - virtualenvwrapper
