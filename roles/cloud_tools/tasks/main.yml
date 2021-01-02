@@ -20,7 +20,7 @@
 
 - name: Add the Microsoft APT repository
   apt_repository:
-    repo: "deb [arch=amd64] {{ ms_repo_baseurl }} {{ansible_distribution_release}} main"
+    repo: "deb [arch=amd64] {{ ms_repo_baseurl }} {{ ansible_distribution_release }} main"
     filename: "{{ azure_cli_pkg_name }}"
     state: present
 
