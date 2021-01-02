@@ -84,38 +84,99 @@ You now have python virtual environment with all the dependencies installed and 
 If you don't want to use the `requirements.txt` file you can install both `ansible` and `molecule` using the following commands:
 
 ```bash
-python3 -m pip install wheel
-python3 -m pip install molecule docker ansible
+python3 -m pip install wheel pytest testinfra flake8 pytest-testinfra pytest-flake8 cookiecutter
+python3 -m pip install "molecule[ansible,lint,docker]"
 ```
 
-## requirements.txt
-
-This file is generated using the following command:
+generate `requirements.txt` file using the following command:
 
 ```bash
 pip freeze > requirements.txt
 ```
 
-after installing all the 3rd party packages you want.
+# Create new Ansible Role
 
-## Creating a role in molecule
+## Ansible Role using custom Cookiecutter template
 
-Now that you have your environment setup you can create a new role with using:
+You can use custom [`cookiecutter`](https://github.com/cookiecutter/cookiecutter) templates with some pre-defined tasks or variables.
+You can use [this](https://github.com/bcochofel/molecule-cookiecutter) repo for reference.
+
+Go to the `roles` folder and execute the following commands:
 
 ```bash
-molecule init role -r ansible-apache -d docker
+cd roles/
+cookiecutter gh:bcochofel/molecule-cookiecutter
 ```
 
-* -r: name of the role
-* -d: driver to use
+answer the on-screen questions.
 
-test the new role by running:
+## Ansible Role using default template
+
+To use the default template execute the following commands:
 
 ```bash
-cd ansible-apache
+cd roles/
+molecule init role -d docker <role-name>
+```
+
+* -d: docker driver
+
+# How to test the Role
+
+Change to the `role` folder.
+
+## Create instance
+
+```bash
+molecule create
+```
+
+## List instances
+
+```bash
+molecule list
+```
+
+## Test Role against instance
+
+```bash
+molecule converge
+```
+
+## Manual inspection
+
+```bash
+molecule login
+```
+
+## Run Verification steps
+
+```bash
+molecule verify
+```
+
+## Run Lint steps
+
+```bash
+molecule lint
+```
+
+## Destroy instance
+
+```bash
+molecule destroy
+```
+
+## Run all tests
+
+```bash
 molecule test
 ```
 
 # References
 
-* [How to test Ansible Roles with Molecule](https://www.digitalocean.com/community/tutorials/how-to-test-ansible-roles-with-molecule-on-ubuntu-18-04)
+* [Molecule Documentation](https://molecule.readthedocs.io/en/latest/index.html)
+* [Molecule Getting Started Guide](https://molecule.readthedocs.io/en/latest/getting-started.html)
+* [Use custom Ansible role templates with Molecule](https://megamorf.gitlab.io/2018/12/18/use-custom-role-templates-with-molecule/)
+* [Ansible is now default test verifier in Molecule](https://loncar.net/posts/ansible-is-now-default-test-verifier-in-molecule/)
+* [Testing your Ansible roles with Molecule](https://www.jeffgeerling.com/blog/2018/testing-your-ansible-roles-molecule)
