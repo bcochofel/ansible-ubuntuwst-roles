@@ -3,3 +3,55 @@
 
 - name: Include checks/asserts
   include: asserts.yml
+
+- name: Get terraform
+  get_url:
+    url: "{{ terraform_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive terraform
+  unarchive:
+    src: "/tmp/{{ terraform_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install terraform binary
+  copy:
+    src: "/tmp/terraform"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get and install terragrunt binary
+  get_url:
+    url: "{{ terragrunt_url }}"
+    dest: "{{ binary_path }}/terragrunt"
+    mode: '0755'
+
+- name: Install conftest
+  apt:
+    deb: "{{ conftest_deb_url }}"
+
+- name: Get tflint
+  get_url:
+    url: "{{ tflint_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive tflint
+  unarchive:
+    src: "/tmp/{{ tflint_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install tflint binary
+  copy:
+    src: "/tmp/tflint"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get and install terraform-docs binary
+  get_url:
+    url: "{{ terraform_docs_url }}"
+    dest: "{{ binary_path }}/terraform-docs"
+    mode: '0755'

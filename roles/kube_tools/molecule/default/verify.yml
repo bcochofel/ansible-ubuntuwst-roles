@@ -5,19 +5,18 @@
   hosts: all
   gather_facts: false
   vars:
-    binaries_to_check:
-      - "'kubectl' in list_files.stdout_lines"
-      - "'kubectx' in list_files.stdout_lines"
-      - "'kubens' in list_files.stdout_lines"
-      - "'fluxctl' in list_files.stdout_lines"
-      - "'istioctl' in list_files.stdout_lines"
-      - "'helm' in list_files.stdout_lines"
+    list_of_binaries:
+      - kubectl
+      - kubectx
+      - kubens
+      - fluxctl
+      - istioctl
+      - helm
   tasks:
-    - name: List files in binary path
+    - name: Check binaries in path
       command:
-        cmd: ls /usr/local/bin/
+        cmd: which {{ item }}
         creates: /tmp/empty
-      register: list_files
-    - name: Check if binaries exist
-      assert:
-        that: "{{ binaries_to_check }}"
+      with_items: "{{ list_of_binaries }}"
+      register: cmd_result
+      failed_when: cmd_result.rc > 0
