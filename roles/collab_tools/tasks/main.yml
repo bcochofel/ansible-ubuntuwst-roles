@@ -51,13 +51,13 @@
 - name: Install Google Chrome
   apt:
     deb: "{{ google_chrome_url }}"
-#
-#- name: Install Slack
-#  community.general.snap:
-#    name: slack
-#    classic: yes
-#
-#- name: Install Skype
-#  community.general.snap:
-#    name: skype
-#    classic: yes
+
+- name: Install Slack
+  community.general.snap:
+    name: slack
+    classic: yes
+
+- name: Install Skype
+  community.general.snap:
+    name: skype
+    classic: yes
