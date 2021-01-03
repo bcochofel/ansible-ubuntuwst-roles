@@ -1,0 +1,34 @@
+---
+# defaults file for collab_tools
+binary_path: /usr/local/bin/
+
+ubuntu_prereqs:
+  - curl
+  - wget
+  - ca-certificates
+  - apt-transport-https
+  - software-properties-common
+  - lsb-release
+  - gnupg
+  - snapd
+  - libssl-dev
+  - python3-pip
+  - python3-dev
+  - python3-venv
+
+ubuntu_packages:
+  - calibre
+  - okular
+  - fbreader
+
+franz_version: 5.6.1
+franz_url: "https://github.com/meetfranz/franz/releases/download/v{{ franz_version }}/Franz-{{ franz_version }}.AppImage"
+
+joplin_version: 1.5.11
+joplin_url: "https://github.com/laurent22/joplin/releases/download/v{{ joplin_version }}/Joplin-{{ joplin_version }}.AppImage"
+
+ms_teams_pkg_name: teams
+ms_repo_key_url: https://packages.microsoft.com/keys/microsoft.asc
+ms_repo_baseurl: https://packages.microsoft.com/repos/ms-teams/
+
+google_chrome_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
