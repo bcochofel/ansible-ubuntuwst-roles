@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include terraform_tools"
+      include_role:
+        name: "terraform_tools"

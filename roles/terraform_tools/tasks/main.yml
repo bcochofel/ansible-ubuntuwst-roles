@@ -1,0 +1,5 @@
+---
+# tasks file for terraform_tools
+
+- name: Include checks/asserts
+  include: asserts.yml
