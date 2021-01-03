@@ -106,6 +106,12 @@ Install `requirements.txt`:
 pip install -r requirements.txt
 ```
 
+Install `community.general` collection for Ansible:
+
+```bash
+ansible-galaxy collection install community.general
+```
+
 You now have python virtual environment with all the dependencies installed and can start deploying the ansible roles.
 
 ## Install Ansible and Molecule
@@ -115,6 +121,8 @@ If you don't want to use the `requirements.txt` file you can install both `ansib
 ```bash
 python3 -m pip install wheel pytest testinfra flake8 pytest-testinfra pytest-flake8 cookiecutter
 python3 -m pip install "molecule[ansible,lint,docker]"
+# for snap module
+ansible-galaxy collection install community.general
 ```
 
 generate `requirements.txt` file using the following command:

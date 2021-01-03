@@ -1,0 +1,63 @@
+---
+# tasks file for dev_tools
+
+- name: Include checks/asserts
+  include: asserts.yml
+
+- name: Install prerequisites
+  apt:
+    name: "{{ ubuntu_prereqs }}"
+    state: present
+    update_cache: yes
+
+- name: Enable universe repository
+  apt_repository:
+    repo: "deb http://pt.archive.ubuntu.com/ubuntu/ {{ ansible_distribution_release|lower }} universe"
+    state: present
+
+- name: Install Microsoft package repository
+  apt:
+    deb: "{{ ms_package_repository }}"
+
+- name: Install Ubuntu packages
+  apt:
+    name: "{{ ubuntu_packages }}"
+    state: present
+    update_cache: yes
+
+- name: Install .NET SDK
+  apt:
+    name: "{{ dotnet_packages }}"
+    state: present
+    update_cache: yes
+
+#- name: Install VS Code
+#  community.general.snap:
+#    name: code
+#    classic: yes
+#
+#- name: Install IntelliJ IDEA
+#  community.general.snap:
+#    name: intellij-idea-community
+#    classic: yes
+#    channel: latest/edge
+
+- name: Get and install minikube binary
+  get_url:
+    url: "{{ minikube_url }}"
+    dest: "{{ binary_path }}/minikube"
+    mode: '0755'
+
+- name: Install pre-commit
+  pip:
+    name: pre-commit
+
+- name: Install molecule
+  pip:
+    name: molecule[ansible,lint,docker]
+
+- name: Get and install Obsidian AppImage
+  get_url:
+    url: "{{ obsidian_url }}"
+    dest: "{{ binary_path }}"
+    mode: '0755'

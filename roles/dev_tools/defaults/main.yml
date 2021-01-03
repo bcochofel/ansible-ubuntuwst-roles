@@ -1,0 +1,38 @@
+---
+# defaults file for dev_tools
+binary_path: /usr/local/bin/
+
+ubuntu_prereqs:
+  - curl
+  - wget
+  - ca-certificates
+  - apt-transport-https
+  - software-properties-common
+  - lsb-release
+  - gnupg
+  - snapd
+  - libssl-dev
+  - python3-pip
+  - python3-dev
+  - python3-venv
+
+ubuntu_packages:
+  - git
+  - golang
+  - meld
+  - vagrant
+  - virtualbox
+  - docker
+  - docker-compose
+  - powershell
+
+minikube_url: "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64"
+
+ms_package_repository: "https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb"
+dotnet_version: 3.1
+dotnet_packages:
+  - "dotnet-runtime-{{ dotnet_version }}"
+  - "dotnet-sdk-{{ dotnet_version }}"
+
+obsidian_version: 0.10.1
+obsidian_url: "https://github.com/obsidianmd/obsidian-releases/releases/download/v{{ obsidian_version }}/Obsidian-{{ obsidian_version }}.AppImage"
