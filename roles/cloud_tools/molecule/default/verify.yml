@@ -1,0 +1,22 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: true
+  vars:
+    list_of_packages:
+      - "'awscli' in ansible_facts.packages"
+      - "'azure-cli' in ansible_facts.packages"
+      - "'ca-certificates' in ansible_facts.packages"
+      - "'curl' in ansible_facts.packages"
+      - "'apt-transport-https' in ansible_facts.packages"
+      - "'lsb-release' in ansible_facts.packages"
+      - "'gnupg' in ansible_facts.packages"
+  tasks:
+    - name: Gather the package manager facts
+      package_facts:
+        manager: auto
+    - name: Assert that following packages are installed
+      assert:
+        that: "{{ list_of_packages }}"
