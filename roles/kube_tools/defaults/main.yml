@@ -1,0 +1,28 @@
+---
+# defaults file for kube_tools
+binary_path: /usr/local/bin/
+
+kubectl_version: 1.20.0
+kubectl_url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
+
+kubectx_version: 0.9.1
+kubectx_url: "https://github.com/ahmetb/kubectx/releases/download/v{{ kubectx_version }}/kubectx"
+
+kubens_version: 0.9.1
+kubens_url: "https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_version }}/kubens"
+
+helm_version: 3.4.2
+helm_url: "https://get.helm.sh/helm-v{{ helm_version }}-linux-amd64.tar.gz"
+helm_checksum: "sha256:cacde7768420dd41111a4630e047c231afa01f67e49cc0c6429563e024da4b98"
+helm_archive_file: "helm-v{{ helm_version }}-linux-amd64.tar.gz"
+helm_binary_file: "linux-amd64/helm"
+
+fluxctl_version: 1.21.0
+fluxctl_url: "https://github.com/fluxcd/flux/releases/download/{{ fluxctl_version }}/fluxctl_linux_amd64"
+
+istioctl_version: 1.8.1
+istioctl_url: "https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istioctl-{{ istioctl_version }}-linux-amd64.tar.gz"
+istioctl_archive_file: "istioctl-{{ istioctl_version }}-linux-amd64.tar.gz"
+
+k8slens_version: 4.0.6
+k8slens_url: "https://github.com/lensapp/lens/releases/download/v{{ k8slens_version }}/Lens-{{ k8slens_version }}.AppImage"
