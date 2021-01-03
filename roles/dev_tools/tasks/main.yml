@@ -31,16 +31,16 @@
     state: present
     update_cache: yes
 
-- name: Install VS Code
-  community.general.snap:
-    name: code
-    classic: yes
-
-- name: Install IntelliJ IDEA
-  community.general.snap:
-    name: intellij-idea-community
-    classic: yes
-    channel: latest/edge
+#- name: Install VS Code
+#  community.general.snap:
+#    name: code
+#    classic: yes
+#
+#- name: Install IntelliJ IDEA
+#  community.general.snap:
+#    name: intellij-idea-community
+#    classic: yes
+#    channel: latest/edge
 
 - name: Get and install minikube binary
   get_url:
