@@ -18,6 +18,7 @@ ubuntu_prereqs:
 
 ubuntu_packages:
   - git
+  - git-cola
   - golang
   - meld
   - vagrant
@@ -36,3 +37,5 @@ dotnet_packages:
 
 obsidian_version: 0.10.1
 obsidian_url: "https://github.com/obsidianmd/obsidian-releases/releases/download/v{{ obsidian_version }}/Obsidian-{{ obsidian_version }}.AppImage"
+
+testmace_url: "https://download.testmace.com/TestMace.AppImage"
