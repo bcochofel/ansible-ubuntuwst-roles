@@ -1,8 +1,72 @@
 ---
 # tasks file for kube_tools
 
-- name: print distro info
-  debug: msg="{{ ansible_os_family }} > {{ ansible_distribution }} {{ ansible_distribution_version }}"
-
 - name: Include checks/asserts
   include: asserts.yml
+
+- name: Get and install kubectl binary
+  get_url:
+    url: "{{ kubectl_url }}"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get and install kubectx binary
+  get_url:
+    url: "{{ kubectx_url }}"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get and install kubens binary
+  get_url:
+    url: "{{ kubens_url }}"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get helm
+  get_url:
+    url: "{{ helm_url }}"
+    dest: /tmp
+    checksum: "{{ helm_checksum }}"
+  delegate_to: localhost
+
+- name: Unarchive helm
+  unarchive:
+    src: "/tmp/{{ helm_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install helm binary
+  copy:
+    src: "/tmp/{{ helm_binary_file }}"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get and install fluxctl binary
+  get_url:
+    url: "{{ fluxctl_url }}"
+    dest: "{{ binary_path }}/fluxctl"
+    mode: '0755'
+
+- name: Get istioctl
+  get_url:
+    url: "{{ istioctl_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive istioctl
+  unarchive:
+    src: "/tmp/{{ istioctl_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install istioctl binary
+  copy:
+    src: "/tmp/istioctl"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get and install Lens AppImage
+  get_url:
+    url: "{{ k8slens_url }}"
+    dest: "{{ binary_path }}"
+    mode: '0755'

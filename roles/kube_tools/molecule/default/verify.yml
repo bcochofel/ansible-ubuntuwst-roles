@@ -4,7 +4,20 @@
 - name: Verify
   hosts: all
   gather_facts: false
+  vars:
+    binaries_to_check:
+      - "'kubectl' in list_files.stdout_lines"
+      - "'kubectx' in list_files.stdout_lines"
+      - "'kubens' in list_files.stdout_lines"
+      - "'fluxctl' in list_files.stdout_lines"
+      - "'istioctl' in list_files.stdout_lines"
+      - "'helm' in list_files.stdout_lines"
   tasks:
-  - name: Example assertion
-    assert:
-      that: true
+    - name: List files in binary path
+      command:
+        cmd: ls /usr/local/bin/
+        creates: /tmp/empty
+      register: list_files
+    - name: Check if binaries exist
+      assert:
+        that: "{{ binaries_to_check }}"

@@ -1,6 +1,10 @@
 ---
 # File: asserts.yml - Asserts for this playbook
 
+- name: Debug OS
+  debug:
+    msg: "{{ ansible_os_family }} > {{ ansible_distribution }} {{ ansible_distribution_version }}"
+
 - name: Check distribution compatibility
   fail:
     msg: "{{ ansible_distribution }} is not supported by this role"
