@@ -1,0 +1,40 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: true
+  vars:
+    list_of_packages:
+      - "'git' in ansible_facts.packages"
+      - "'curl' in ansible_facts.packages"
+      - "'wget' in ansible_facts.packages"
+      - "'golang' in ansible_facts.packages"
+      - "'meld' in ansible_facts.packages"
+      - "'vagrant' in ansible_facts.packages"
+      - "'virtualbox' in ansible_facts.packages"
+      - "'docker' in ansible_facts.packages"
+      - "'docker-compose' in ansible_facts.packages"
+    list_of_binaries:
+      - intellij-idea-community
+      - code
+      - docker
+      - minikube
+      - pre-commit
+      - pwsh
+      - ansible
+      - molecule
+  tasks:
+    - name: Gather the package manager facts
+      package_facts:
+        manager: auto
+    - name: Assert that following packages are installed
+      assert:
+        that: "{{ list_of_packages }}"
+    - name: Check binaries in path
+      command:
+        cmd: which {{ item }}
+        creates: /tmp/empty
+      with_items: "{{ list_of_binaries }}"
+      register: cmd_result
+      failed_when: cmd_result.rc > 0
