@@ -1,0 +1,20 @@
+---
+# defaults file for terraform_tools
+binary_path: /usr/local/bin/
+
+terraform_version: 0.14.3
+terraform_url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip"
+terraform_archive_file: "terraform_{{ terraform_version }}_linux_amd64.zip"
+
+terragrunt_version: 0.26.7
+terragrunt_url: "https://github.com/gruntwork-io/terragrunt/releases/download/v{{ terragrunt_version }}/terragrunt_linux_amd64"
+
+conftest_version: 0.22.0
+conftest_deb_url: "https://github.com/open-policy-agent/conftest/releases/download/v{{ conftest_version }}/conftest_{{ conftest_version }}_linux_amd64.deb"
+
+tflint_version: 0.23.0
+tflint_url: "https://github.com/terraform-linters/tflint/releases/download/v{{ tflint_version }}/tflint_linux_amd64.zip"
+tflint_archive_file: "tflint_linux_amd64.zip"
+
+terraform_docs_version: 0.10.1
+terraform_docs_url: "https://github.com/terraform-docs/terraform-docs/releases/download/v{{ terraform_docs_version }}/terraform-docs-v{{ terraform_docs_version }}-linux-amd64"

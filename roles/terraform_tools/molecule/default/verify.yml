@@ -6,12 +6,11 @@
   gather_facts: false
   vars:
     list_of_binaries:
-      - kubectl
-      - kubectx
-      - kubens
-      - fluxctl
-      - istioctl
-      - helm
+      - terraform
+      - terragrunt
+      - tflint
+      - conftest
+      - terraform-docs
   tasks:
     - name: Check binaries in path
       command:
