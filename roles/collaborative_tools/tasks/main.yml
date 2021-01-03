@@ -4,6 +4,12 @@
 - name: Include checks/asserts
   include: asserts.yml
 
+- name: Install prerequisites
+  apt:
+    name: "{{ ubuntu_prereqs }}"
+    state: present
+    update_cache: yes
+
 - name: Import Microsoft APT repository key
   apt_key:
     url: "{{ ms_repo_key_url }}"
