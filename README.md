@@ -45,7 +45,14 @@ List of playbooks available:
 | playbook | description |
 | -------- | ----------- |
 | base_utils.yml | Install base utilities and pip packages |
+| cloud_tools.yml | Install Azure, AWS and GCP(*) CLI tools |
+| collab_tools.yml | Collaboration tools |
+| dev_tools.yml | Development tools |
 | i3wm.yml | Install i3 Window Manager |
+| kube_tools.yml | Kubernetes administration tools |
+| terraform_tools.yml | Terraform tools for linting and compliance |
+
+(*) not yet implemented
 
 **NOTE: Before running the playbooks ensure that your `inventory` is configured.**
 
