@@ -3,4 +3,4 @@
   become: yes
   gather_facts: true
   roles:
-    - { role: collaborative_tools }
+    - { role: collab_tools }
