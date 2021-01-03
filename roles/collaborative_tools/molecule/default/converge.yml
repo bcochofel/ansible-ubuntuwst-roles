@@ -1,7 +1,0 @@
----
-- name: Converge
-  hosts: all
-  tasks:
-    - name: "Include collaborative_tools"
-      include_role:
-        name: "collaborative_tools"
