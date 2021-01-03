@@ -16,8 +16,8 @@
       - "'docker' in ansible_facts.packages"
       - "'docker-compose' in ansible_facts.packages"
     list_of_binaries:
-      - intellij-idea-community
-      - code
+#      - intellij-idea-community
+#      - code
       - docker
       - minikube
       - pre-commit
