@@ -1,0 +1,63 @@
+---
+# tasks file for collab_tools
+
+- name: Include checks/asserts
+  include: asserts.yml
+
+- name: Install prerequisites
+  apt:
+    name: "{{ ubuntu_prereqs }}"
+    state: present
+    update_cache: yes
+
+- name: Import Microsoft APT repository key
+  apt_key:
+    url: "{{ ms_repo_key_url }}"
+    state: present
+
+- name: Add the Microsoft APT repository
+  apt_repository:
+    repo: "deb [arch=amd64] {{ ms_repo_baseurl }} stable main"
+    filename: "{{ ms_teams_pkg_name }}"
+    update_cache_retry_max_delay: 60
+    update_cache_retries: 5
+    update_cache: yes
+    state: present
+
+- name: Install ms-teams
+  apt:
+    name: "{{ ms_teams_pkg_name }}"
+    state: present
+    update_cache: yes
+
+- name: Install Ubuntu packages
+  apt:
+    name: "{{ ubuntu_packages }}"
+    state: present
+    update_cache: yes
+
+- name: Get and install Franz AppImage
+  get_url:
+    url: "{{ franz_url }}"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get and install Joplin AppImage
+  get_url:
+    url: "{{ joplin_url }}"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Install Google Chrome
+  apt:
+    deb: "{{ google_chrome_url }}"
+#
+#- name: Install Slack
+#  community.general.snap:
+#    name: slack
+#    classic: yes
+#
+#- name: Install Skype
+#  community.general.snap:
+#    name: skype
+#    classic: yes
