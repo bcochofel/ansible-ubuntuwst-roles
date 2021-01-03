@@ -1,0 +1,12 @@
+---
+# File: asserts.yml - Asserts for this playbook
+
+- name: Check distribution compatibility
+  fail:
+    msg: "{{ ansible_distribution }} is not supported by this role"
+  when: ansible_distribution not in ['Ubuntu']
+
+- name: Fail if not a new release of Ubuntu
+  fail:
+    msg: "{{ ansible_distribution_version }} is not a supported version of {{ ansible_distribution }} for this role"
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version is version_compare(20.04, '<')
