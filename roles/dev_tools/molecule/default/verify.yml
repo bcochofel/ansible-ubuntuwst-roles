@@ -7,6 +7,7 @@
   vars:
     list_of_packages:
       - "'git' in ansible_facts.packages"
+      - "'git-cola' in ansible_facts.packages"
       - "'curl' in ansible_facts.packages"
       - "'wget' in ansible_facts.packages"
       - "'golang' in ansible_facts.packages"

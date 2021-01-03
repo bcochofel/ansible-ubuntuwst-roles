@@ -41,6 +41,12 @@
 #    name: intellij-idea-community
 #    classic: yes
 #    channel: latest/edge
+#
+#- name: Install Insomnia
+#  community.general.snap:
+#    name:
+#      - insomnia
+#      - insomnia-designer
 
 - name: Get and install minikube binary
   get_url:
@@ -59,5 +65,11 @@
 - name: Get and install Obsidian AppImage
   get_url:
     url: "{{ obsidian_url }}"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get and install TestMace AppImage
+  get_url:
+    url: "{{ testmace_url }}"
     dest: "{{ binary_path }}"
     mode: '0755'
