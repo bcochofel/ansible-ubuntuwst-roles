@@ -32,3 +32,5 @@ ms_repo_key_url: https://packages.microsoft.com/keys/microsoft.asc
 ms_repo_baseurl: https://packages.microsoft.com/repos/ms-teams/
 
 google_chrome_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+
+qnap_sync_url: "https://download.qnap.com/Storage/Utility/QNAPQsyncClientUbuntux64-1.0.5.0305.deb"
