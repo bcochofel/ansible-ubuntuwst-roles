@@ -33,6 +33,9 @@ ubuntu_packages:
   - gnome-control-center
   - gnome-screensaver
   - blueman
+  - openvpn
+  - network-manager-openvpn
+  - network-manager-openvpn-gnome
 pip_packages:
   - pytest
   - pynvim
