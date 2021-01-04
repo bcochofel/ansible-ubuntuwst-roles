@@ -52,6 +52,10 @@
   apt:
     deb: "{{ google_chrome_url }}"
 
+- name: Install QNAP Sync
+  apt:
+    deb: "{{ qnap_sync_url }}"
+
 - name: Install Slack
   community.general.snap:
     name: slack
