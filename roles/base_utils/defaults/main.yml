@@ -30,6 +30,9 @@ ubuntu_packages:
   - golang
   - vim
   - neovim
+  - gnome-control-center
+  - gnome-screensaver
+  - blueman
 pip_packages:
   - pytest
   - pynvim
