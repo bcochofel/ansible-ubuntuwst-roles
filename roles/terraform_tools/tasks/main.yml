@@ -28,6 +28,12 @@
     dest: "{{ binary_path }}/terragrunt"
     mode: '0755'
 
+- name: Get and install OPA binary
+  get_url:
+    url: "{{ opa_url }}"
+    dest: "{{ binary_path }}/opa"
+    mode: '0755'
+
 - name: Install conftest
   apt:
     deb: "{{ conftest_deb_url }}"

@@ -18,12 +18,12 @@
 
 - name: Import Microsoft APT repository key
   apt_key:
-    url: "{{ ms_repo_key_url }}"
+    url: "{{ ms_azure_cli_repo_key_url }}"
     state: present
 
 - name: Add the Microsoft APT repository
   apt_repository:
-    repo: "deb [arch=amd64] {{ ms_repo_baseurl }} {{ ansible_distribution_release }} main"
+    repo: "deb [arch=amd64] {{ ms_azure_cli_repo_baseurl }} {{ ansible_distribution_release }} main"
     filename: "{{ azure_cli_pkg_name }}"
     update_cache_retry_max_delay: 60
     update_cache_retries: 5
