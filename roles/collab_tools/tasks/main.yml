@@ -12,12 +12,12 @@
 
 - name: Import Microsoft APT repository key
   apt_key:
-    url: "{{ ms_repo_key_url }}"
+    url: "{{ ms_teams_repo_key_url }}"
     state: present
 
 - name: Add the Microsoft APT repository
   apt_repository:
-    repo: "deb [arch=amd64] {{ ms_repo_baseurl }} stable main"
+    repo: "deb [arch=amd64] {{ ms_teams_repo_baseurl }} stable main"
     filename: "{{ ms_teams_pkg_name }}"
     update_cache_retry_max_delay: 60
     update_cache_retries: 5
@@ -52,9 +52,9 @@
   apt:
     deb: "{{ google_chrome_url }}"
 
-- name: Install QNAP Sync
-  apt:
-    deb: "{{ qnap_sync_url }}"
+#- name: Install QNAP Sync
+#  apt:
+#    deb: "{{ qnap_sync_url }}"
 
 - name: Install Slack
   community.general.snap:
