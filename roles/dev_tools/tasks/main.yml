@@ -38,7 +38,8 @@
 
 - name: Add the Microsoft APT repository
   apt_repository:
-    repo: "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] {{ vs_code_repo_baseurl }} stable main"
+#    repo: "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] {{ vs_code_repo_baseurl }} stable main"
+    repo: "deb [arch=amd64] {{ vs_code_repo_baseurl }} stable main"
     filename: "{{ vs_code_pkg_name }}"
     update_cache_retry_max_delay: 60
     update_cache_retries: 5
