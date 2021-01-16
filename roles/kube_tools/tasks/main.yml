@@ -70,3 +70,9 @@
     url: "{{ k8slens_url }}"
     dest: "{{ binary_path }}"
     mode: '0755'
+
+- name: Get and install stern binary
+  get_url:
+    url: "{{ stern_url }}"
+    dest: "{{ binary_path }}/stern"
+    mode: '0755'

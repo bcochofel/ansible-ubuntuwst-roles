@@ -26,3 +26,6 @@ istioctl_archive_file: "istioctl-{{ istioctl_version }}-linux-amd64.tar.gz"
 
 k8slens_version: 4.0.6
 k8slens_url: "https://github.com/lensapp/lens/releases/download/v{{ k8slens_version }}/Lens-{{ k8slens_version }}.AppImage"
+
+stern_version: 1.11.0
+stern_url: "https://github.com/wercker/stern/releases/download/{{ stern_version }}/stern_linux_amd64"
