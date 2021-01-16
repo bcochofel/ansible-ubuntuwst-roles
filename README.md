@@ -5,28 +5,13 @@
 
 This repository has several `ansible roles and playbooks` that can be used to configure Ubuntu as a Workstation.
 
-# GIT Hooks
+# pre-commit hooks
 
-* [`pre-commit`](https://pre-commit.com/#install)
+Read the [pre-commit hooks](docs/pre-commit-hooks.md) document for more info.
 
-You can also use [pre-commit](https://pre-commit.com/#install). After installing
-`pre-commit` just execute:
+# git-chglog
 
-```ShellSession
-pre-commit install
-```
-
-You can run specific hooks on all files:
-
-```ShellSession
-pre-commit run terraform-fmt --all-files
-```
-
-You can force all the hooks to run with the following command:
-
-```ShellSession
-pre-commit run --all-files
-```
+Read the [git-chglog](docs/git-chlog.md) document for more info.
 
 # TL;DR
 
