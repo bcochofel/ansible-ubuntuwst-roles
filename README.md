@@ -1,11 +1,7 @@
 # Ansible Roles for Ubuntu Workstation
 
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![GitHub license](https://img.shields.io/github/license/bcochofel/ansible-ubuntuwst-roles.svg)](https://github.com/bcochofel/ansible-ubuntuwst-roles/blob/master/LICENSE)
-[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/bcochofel/ansible-ubuntuwst-roles)](https://github.com/bcochofel/ansible-ubuntuwst-roles/tags)
-[![GitHub issues](https://img.shields.io/github/issues/bcochofel/ansible-ubuntuwst-roles.svg)](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/)
-[![GitHub forks](https://img.shields.io/github/forks/bcochofel/ansible-ubuntuwst-roles.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/bcochofel/ansible-ubuntuwst-roles/network/)
-[![GitHub stars](https://img.shields.io/github/stars/bcochofel/ansible-ubuntuwst-roles.svg?style=social&label=Star&maxAge=2592000)](https://github.com/bcochofel/ansible-ubuntuwst-roles/stargazers/)
+[![pre-commit badge][pre-commit-badge]][pre-commit] [![Conventional commits badge][conventional-commits-badge]][conventional-commits] [![Keep a Changelog v1.1.0 badge][keep-a-changelog-badge]][keep-a-changelog] [![MIT License Badge][license-badge]][license]
+[![GitHub release (latest by date)][gh-release-badge]][changelog]
 
 This repository has several `ansible roles and playbooks` that can be used to configure Ubuntu as a Workstation.
 
@@ -224,3 +220,14 @@ molecule test
 * [Use custom Ansible role templates with Molecule](https://megamorf.gitlab.io/2018/12/18/use-custom-role-templates-with-molecule/)
 * [Ansible is now default test verifier in Molecule](https://loncar.net/posts/ansible-is-now-default-test-verifier-in-molecule/)
 * [Testing your Ansible roles with Molecule](https://www.jeffgeerling.com/blog/2018/testing-your-ansible-roles-molecule)
+
+[pre-commit]: https://github.com/pre-commit/pre-commit
+[pre-commit-badge]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+[conventional-commits-badge]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-green.svg
+[conventional-commits]: https://conventionalcommits.org
+[keep-a-changelog-badge]: https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.1.0-%23E05735
+[keep-a-changelog]: https://keepachangelog.com/en/1.0.0/
+[license]: ./LICENSE
+[license-badge]: https://img.shields.io/badge/license-MIT-green.svg
+[gh-release-badge]: https://img.shields.io/github/v/release/bcochofel/ansible-ubuntuwst-roles?color=green
+[changelog]: ./CHANGELOG.md
