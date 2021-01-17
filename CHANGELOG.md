@@ -2,6 +2,12 @@
 ## [Unreleased]
 
 
+<a name="1.1.1"></a>
+## [1.1.1] - 2021-01-17
+### Feat
+- add tfswitch tool
+
+
 <a name="1.1.0"></a>
 ## [1.1.0] - 2021-01-16
 ### Docs
@@ -53,7 +59,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.1...HEAD
+[1.1.1]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.0.2...1.1.0
 [1.0.2]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.0.0...1.0.1
