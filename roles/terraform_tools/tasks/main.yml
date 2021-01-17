@@ -61,3 +61,21 @@
     url: "{{ terraform_docs_url }}"
     dest: "{{ binary_path }}/terraform-docs"
     mode: '0755'
+
+- name: Get tfswitch
+  get_url:
+    url: "{{ tfswitch_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive tfswitch
+  unarchive:
+    src: "/tmp/{{ tfswitch_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install tfswitch binary
+  copy:
+    src: "/tmp/tfswitch"
+    dest: "{{ binary_path }}"
+    mode: '0755'

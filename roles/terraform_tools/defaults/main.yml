@@ -21,3 +21,7 @@ tflint_archive_file: "tflint_linux_amd64.zip"
 
 terraform_docs_version: 0.10.1
 terraform_docs_url: "https://github.com/terraform-docs/terraform-docs/releases/download/v{{ terraform_docs_version }}/terraform-docs-v{{ terraform_docs_version }}-linux-amd64"
+
+tfswitch_version: 0.10.958
+tfswitch_url: https://github.com/warrensbox/terraform-switcher/releases/download/{{ tfswitch_version }}/terraform-switcher_{{ tfswitch_version }}_linux_amd64.tar.gz
+tfswitch_archive_file: terraform-switcher_{{ tfswitch_version }}_linux_amd64.tar.gz

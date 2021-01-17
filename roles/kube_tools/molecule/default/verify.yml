@@ -12,6 +12,7 @@
       - fluxctl
       - istioctl
       - helm
+      - stern
   tasks:
     - name: Check binaries in path
       command:

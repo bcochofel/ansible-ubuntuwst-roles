@@ -11,6 +11,7 @@
       - tflint
       - conftest
       - terraform-docs
+      - tfswitch
   tasks:
     - name: Check binaries in path
       command:
