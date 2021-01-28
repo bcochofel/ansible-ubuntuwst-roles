@@ -25,10 +25,6 @@ repos:
       - id: tflint
         files: ^examples/
         exclude: .*/README\.md
-      - id: gofmt
-        files: ^test/
-      - id: golint
-        files: ^test/
   - repo: https://github.com/commitizen-tools/commitizen
     rev: master
     hooks:
