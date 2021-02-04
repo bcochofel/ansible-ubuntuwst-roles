@@ -16,6 +16,7 @@
       - "'virtualbox' in ansible_facts.packages"
       - "'docker' in ansible_facts.packages"
       - "'docker-compose' in ansible_facts.packages"
+      - "'draw.io' in ansible_facts.packages"
     list_of_binaries:
 #      - intellij-idea-community
       - code

@@ -94,3 +94,7 @@
     url: "{{ testmace_url }}"
     dest: "{{ binary_path }}"
     mode: '0755'
+
+- name: Install drawio desktop
+  apt:
+    deb: "{{ drawio_url }}"

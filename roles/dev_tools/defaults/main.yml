@@ -43,3 +43,7 @@ testmace_url: "https://download.testmace.com/TestMace.AppImage"
 vs_code_pkg_name: code
 vs_code_repo_key_url: https://packages.microsoft.com/keys/microsoft.asc
 vs_code_repo_baseurl: https://packages.microsoft.com/repos/code/
+
+
+drawio_version: 14.1.8
+drawio_url: "https://github.com/jgraph/drawio-desktop/releases/download/v{{ drawio_version }}/draw.io-amd64-{{ drawio_version }}.deb"
