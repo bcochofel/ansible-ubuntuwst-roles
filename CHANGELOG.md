@@ -2,6 +2,22 @@
 ## [Unreleased]
 
 
+<a name="1.1.2"></a>
+## [1.1.2] - 2021-02-13
+### Docs
+- update dependencies
+
+### Feat
+- GitVersion
+- draw io desktop
+
+### Fix
+- virtualenv
+
+### Pull Requests
+- Merge pull request [#27](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/27) from bcochofel/gitversion
+
+
 <a name="1.1.1"></a>
 ## [1.1.1] - 2021-01-17
 ### Feat
@@ -59,7 +75,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.1...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.2...HEAD
+[1.1.2]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.1...1.1.2
 [1.1.1]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.0.2...1.1.0
 [1.0.2]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.0.1...1.0.2
