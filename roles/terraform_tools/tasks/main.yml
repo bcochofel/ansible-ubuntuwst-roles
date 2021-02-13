@@ -69,17 +69,17 @@
   delegate_to: localhost
 
 - name: Install tflint azurerm ruleset binary
+  become: false
   copy:
     src: "/tmp/tflint-ruleset-azurerm"
     dest: $HOME/.tflint.d/plugins/
     mode: '0755'
 
 - name: tflint plugins configuration
+  become: false
   template:
     src: tflint.hcl.j2
     dest: $HOME/.tflint.hcl
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
     mode: u=rw,g=r,o=r
 
 - name: Get and install terraform-docs binary
