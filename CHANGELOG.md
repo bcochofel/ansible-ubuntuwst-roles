@@ -2,6 +2,12 @@
 ## [Unreleased]
 
 
+<a name="1.1.6"></a>
+## [1.1.6] - 2021-02-13
+### Fix
+- tflint.hcl
+
+
 <a name="1.1.5"></a>
 ## [1.1.5] - 2021-02-13
 ### Fix
@@ -96,7 +102,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.5...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.6...HEAD
+[1.1.6]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.4...1.1.5
 [1.1.4]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.3...1.1.4
 [1.1.3]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.2...1.1.3
