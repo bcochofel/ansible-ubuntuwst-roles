@@ -98,3 +98,27 @@
 - name: Install drawio desktop
   apt:
     deb: "{{ drawio_url }}"
+
+- name: Get GitVersion
+  get_url:
+    url: "{{ gitversion_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive GitVersion
+  unarchive:
+    src: "/tmp/{{ gitversion_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install GitVersion binary
+  copy:
+    src: "/tmp/gitversion"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Install GitVersion lib
+  copy:
+    src: "/tmp/libgit2-6777db8.so"
+    dest: "{{ binary_path }}"
+    mode: '0755'

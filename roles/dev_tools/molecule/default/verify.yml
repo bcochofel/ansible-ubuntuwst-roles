@@ -26,6 +26,7 @@
       - pwsh
       - ansible
       - molecule
+      - gitversion
   tasks:
     - name: Gather the package manager facts
       package_facts:
