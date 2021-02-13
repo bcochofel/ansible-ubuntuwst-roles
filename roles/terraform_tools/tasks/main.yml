@@ -56,6 +56,32 @@
     dest: "{{ binary_path }}"
     mode: '0755'
 
+- name: Get tflint azurerm ruleset
+  get_url:
+    url: "{{ tflint_azurerm_ruleset_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive tflint azurerm ruleset
+  unarchive:
+    src: "/tmp/{{ tflint_azurerm_ruleset_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install tflint azurerm ruleset binary
+  copy:
+    src: "/tmp/tflint-ruleset-azurerm"
+    dest: $HOME/.tflint.d/plugins/
+    mode: '0755'
+
+- name: tflint plugins configuration
+  template:
+    src: tflint.hcl.j2
+    dest: $HOME/.tflint.hcl
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: u=rw,g=r,o=r
+
 - name: Get and install terraform-docs binary
   get_url:
     url: "{{ terraform_docs_url }}"

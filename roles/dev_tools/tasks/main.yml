@@ -134,3 +134,21 @@
     src: "/tmp/libgit2-6777db8.so"
     dest: "{{ binary_path }}"
     mode: '0755'
+
+- name: Get git-chglog
+  get_url:
+    url: "{{ git_chglog_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive git-chglog
+  unarchive:
+    src: "/tmp/{{ git_chglog_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install git-chglog binary
+  copy:
+    src: "/tmp/git-chglog"
+    dest: "{{ binary_path }}"
+    mode: '0755'
