@@ -111,6 +111,18 @@
     dest: /tmp
   delegate_to: localhost
 
+- name: Change GitVersion binary file permissions
+  ansible.builtin.file:
+    path: /tmp/gitversion
+    mode: '0755'
+  delegate_to: localhost
+
+- name: Change GitVersion lib file permissions
+  ansible.builtin.file:
+    path: /tmp/libgit2-6777db8.so
+    mode: '0755'
+  delegate_to: localhost
+
 - name: Install GitVersion binary
   copy:
     src: "/tmp/gitversion"
