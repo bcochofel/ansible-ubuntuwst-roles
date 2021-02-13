@@ -27,6 +27,7 @@
       - ansible
       - molecule
       - gitversion
+      - git-chglog
   tasks:
     - name: Gather the package manager facts
       package_facts:

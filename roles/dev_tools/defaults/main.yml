@@ -50,3 +50,7 @@ drawio_url: "https://github.com/jgraph/drawio-desktop/releases/download/v{{ draw
 gitversion_version: 5.6.5
 gitversion_url: https://github.com/GitTools/GitVersion/releases/download/{{ gitversion_version }}/gitversion-linux-x64-{{ gitversion_version }}.tar.gz
 gitversion_archive_file: gitversion-linux-x64-{{ gitversion_version }}.tar.gz
+
+git_chglog_version: 0.10.0
+git_chglog_url: https://github.com/git-chglog/git-chglog/releases/download/v{{ git_chglog_version }}/git-chglog_{{ git_chglog_version }}_linux_amd64.tar.gz
+git_chglog_archive_file: git-chglog_{{ git_chglog_version }}_linux_amd64.tar.gz

@@ -18,6 +18,9 @@ conftest_deb_url: "https://github.com/open-policy-agent/conftest/releases/downlo
 tflint_version: 0.24.1
 tflint_url: "https://github.com/terraform-linters/tflint/releases/download/v{{ tflint_version }}/tflint_linux_amd64.zip"
 tflint_archive_file: "tflint_linux_amd64.zip"
+tflint_azurerm_ruleset_version: 0.8.2
+tflint_azurerm_ruleset_url: https://github.com/terraform-linters/tflint-ruleset-azurerm/releases/download/v{{ tflint_azurerm_ruleset }}/tflint-ruleset-azurerm_linux_amd64.zip
+tflint_azurerm_ruleset_archive_file: "tflint-ruleset-azurerm_linux_amd64.zip"
 
 terraform_docs_version: 0.11.0
 terraform_docs_url: "https://github.com/terraform-docs/terraform-docs/releases/download/v{{ terraform_docs_version }}/terraform-docs-v{{ terraform_docs_version }}-linux-amd64"
