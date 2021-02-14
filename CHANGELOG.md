@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="1.1.12"></a>
+## [1.1.12] - 2021-02-14
+### Fix
+- don't install qnap
+
+### Pull Requests
+- Merge pull request [#29](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/29) from bcochofel/fix_qnap
+
+
 <a name="1.1.11"></a>
 ## [1.1.11] - 2021-02-14
 ### Docs
@@ -132,7 +141,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.11...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.12...HEAD
+[1.1.12]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.11...1.1.12
 [1.1.11]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.10...1.1.11
 [1.1.10]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.9...1.1.10
 [1.1.9]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.8...1.1.9
