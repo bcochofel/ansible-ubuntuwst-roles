@@ -5,15 +5,15 @@
 
 This repository has several `ansible roles and playbooks` that can be used to configure Ubuntu as a Workstation.
 
-# pre-commit hooks
+## pre-commit hooks
 
 Read the [pre-commit hooks](docs/pre-commit-hooks.md) document for more info.
 
-# git-chglog
+## git-chglog
 
 Read the [git-chglog](docs/git-chlog.md) document for more info.
 
-# TL;DR
+## TL;DR
 
 If you just want to run the playbooks on this repo you just need to install `ansible` and configure it to use
 on the remote hosts you want to.
@@ -49,17 +49,18 @@ to run the `i3wm.yml` playbook on `localhost` execute:
 ansible-playbook -i localhost, i3wm.yml
 ```
 
-# Requirements
+## Requirements
 
 This repository should be used from a Python Virtual Environment.
 
-## Setup Python 3
+### Setup Python 3
 
-Make sure versions are up-to-date:
+Make sure versions are up-to-date and install git and ssh server:
 
 ```bash
 sudo apt update
 sudo apt -y upgrade
+sudo apt -y git ssh
 ```
 
 Check Python version:
@@ -74,7 +75,7 @@ Install essential tools for the development environment:
 sudo apt install -y python3-pip build-essential libssl-dev libffi-dev python3-dev python3-venv
 ```
 
-## Setup Virtual Environment
+### Setup Virtual Environment
 
 Create the Virtual Environment:
 
@@ -103,7 +104,24 @@ ansible-galaxy collection install community.general
 
 You now have python virtual environment with all the dependencies installed and can start deploying the ansible roles.
 
-## Install Ansible and Molecule
+### Configure Ansible
+
+You should have `ssh` installed and running.
+
+Create SSH key:
+
+```bash
+ssh-keygen -t rsa
+```
+
+Ensure sudo passwordless for the ansible user by creating a file
+`/etc/sudoers.d/bcochofel` with the following contents:
+
+```bash
+bcochofel ALL=(ALL) NOPASSWD: ALL
+```
+
+### Install Ansible and Molecule manually
 
 If you don't want to use the `requirements.txt` file you can install both `ansible` and `molecule` using the following commands:
 
@@ -120,9 +138,9 @@ generate `requirements.txt` file using the following command:
 pip freeze > requirements.txt
 ```
 
-# Create new Ansible Role
+## Create new Ansible Role
 
-## Ansible Role using custom Cookiecutter template
+### Ansible Role using custom Cookiecutter template
 
 You can use custom [`cookiecutter`](https://github.com/cookiecutter/cookiecutter) templates with some pre-defined tasks or variables.
 You can use [this](https://github.com/bcochofel/molecule-cookiecutter) repo for reference.
@@ -136,7 +154,7 @@ cookiecutter gh:bcochofel/molecule-cookiecutter
 
 answer the on-screen questions.
 
-## Ansible Role using default template
+### Ansible Role using default template
 
 To use the default template execute the following commands:
 
@@ -147,59 +165,59 @@ molecule init role -d docker <role-name>
 
 * -d: docker driver
 
-# How to test the Role
+## How to test the Role
 
 Change to the `role` folder.
 
-## Create instance
+### Create instance
 
 ```bash
 molecule create
 ```
 
-## List instances
+### List instances
 
 ```bash
 molecule list
 ```
 
-## Test Role against instance
+### Test Role against instance
 
 ```bash
 molecule converge
 ```
 
-## Manual inspection
+### Manual inspection
 
 ```bash
 molecule login
 ```
 
-## Run Verification steps
+### Run Verification steps
 
 ```bash
 molecule verify
 ```
 
-## Run Lint steps
+### Run Lint steps
 
 ```bash
 molecule lint
 ```
 
-## Destroy instance
+### Destroy instance
 
 ```bash
 molecule destroy
 ```
 
-## Run all tests
+### Run all tests
 
 ```bash
 molecule test
 ```
 
-# References
+## References
 
 * [Molecule Documentation](https://molecule.readthedocs.io/en/latest/index.html)
 * [Molecule Getting Started Guide](https://molecule.readthedocs.io/en/latest/getting-started.html)
