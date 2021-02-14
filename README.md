@@ -87,7 +87,7 @@ python3 -m venv .venv
 Activate the environment:
 
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 Install `requirements.txt`:
