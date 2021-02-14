@@ -60,7 +60,6 @@ Make sure versions are up-to-date and install git and ssh server:
 ```bash
 sudo apt update
 sudo apt -y upgrade
-sudo apt -y git ssh
 ```
 
 Check Python version:
@@ -72,7 +71,7 @@ python3 -V
 Install essential tools for the development environment:
 
 ```bash
-sudo apt install -y python3-pip build-essential libssl-dev libffi-dev python3-dev python3-venv
+sudo apt install -y python3-pip build-essential libssl-dev libffi-dev python3-dev python3-venv git ssh
 ```
 
 ### Setup Virtual Environment
