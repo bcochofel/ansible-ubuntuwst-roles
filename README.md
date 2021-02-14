@@ -79,7 +79,9 @@ sudo apt install -y python3-pip build-essential libssl-dev libffi-dev python3-de
 Create the Virtual Environment:
 
 ```bash
-python3 -m venv venv
+git clone https://github.com/bcochofel/ansible-ubuntuwst-roles.git
+cd ansible-ubuntuwst-roles
+python3 -m venv .venv
 ```
 
 Activate the environment:
