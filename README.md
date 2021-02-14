@@ -115,12 +115,20 @@ Create SSH key:
 ssh-keygen -t rsa
 ```
 
+and add the public key to `~/.ssh/authorized_keys`:
+
+```bash
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
 Ensure sudo passwordless for the ansible user by creating a file
 `/etc/sudoers.d/bcochofel` with the following contents:
 
 ```bash
 bcochofel ALL=(ALL) NOPASSWD: ALL
 ```
+
+and that the file permissions are `0440`.
 
 ### Install Ansible and Molecule manually
 
