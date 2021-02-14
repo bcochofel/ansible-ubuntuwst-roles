@@ -2,6 +2,12 @@
 ## [Unreleased]
 
 
+<a name="1.1.7"></a>
+## [1.1.7] - 2021-02-14
+### Docs
+- update requirements
+
+
 <a name="1.1.6"></a>
 ## [1.1.6] - 2021-02-13
 ### Fix
@@ -102,7 +108,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.6...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.7...HEAD
+[1.1.7]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.6...1.1.7
 [1.1.6]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.4...1.1.5
 [1.1.4]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.3...1.1.4
