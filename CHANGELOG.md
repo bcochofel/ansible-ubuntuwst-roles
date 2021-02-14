@@ -2,6 +2,12 @@
 ## [Unreleased]
 
 
+<a name="1.1.10"></a>
+## [1.1.10] - 2021-02-14
+### Docs
+- fix docs
+
+
 <a name="1.1.9"></a>
 ## [1.1.9] - 2021-02-14
 ### Docs
@@ -120,7 +126,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.9...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.10...HEAD
+[1.1.10]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.9...1.1.10
 [1.1.9]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.8...1.1.9
 [1.1.8]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.7...1.1.8
 [1.1.7]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.6...1.1.7
