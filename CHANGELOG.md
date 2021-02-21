@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="1.1.13"></a>
+## [1.1.13] - 2021-02-21
+### Feat
+- add samba support for base utils
+
+### Pull Requests
+- Merge pull request [#30](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/30) from bcochofel/fix_base_utils
+
+
 <a name="1.1.12"></a>
 ## [1.1.12] - 2021-02-14
 ### Fix
@@ -141,7 +150,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.12...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.13...HEAD
+[1.1.13]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.12...1.1.13
 [1.1.12]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.11...1.1.12
 [1.1.11]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.10...1.1.11
 [1.1.10]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.9...1.1.10
