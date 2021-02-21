@@ -36,6 +36,7 @@ ubuntu_packages:
   - openvpn
   - network-manager-openvpn
   - network-manager-openvpn-gnome
+  - cifs-utils
 pip_packages:
   - pytest
   - pynvim
@@ -53,3 +54,4 @@ pip_packages:
   - autorandr
   - testinfra
   - virtualenvwrapper
+  - terraplanfeed
