@@ -29,3 +29,11 @@ k8slens_url: "https://github.com/lensapp/lens/releases/download/v{{ k8slens_vers
 
 stern_version: 1.11.0
 stern_url: "https://github.com/wercker/stern/releases/download/{{ stern_version }}/stern_linux_amd64"
+
+kustomize_version: 4.0.1
+kustomize_url: "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv{{ kustomize_version }}/kustomize_v{{ kustomize_version }}_linux_amd64.tar.gz"
+kustomize_archive_file: "kustomize_v{{ kustomize_version }}_linux_amd64.tar.gz"
+
+kubeval_version: 0.15.0
+kubeval_url: "https://github.com/instrumenta/kubeval/releases/download/{{ kubeval_version }}/kubeval-linux-amd64.tar.gz"
+kubeval_archive_file: "kubeval-linux-amd64.tar.gz"
