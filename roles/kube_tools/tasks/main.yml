@@ -76,3 +76,39 @@
     url: "{{ stern_url }}"
     dest: "{{ binary_path }}/stern"
     mode: '0755'
+
+- name: Get kustomize
+  get_url:
+    url: "{{ kustomize_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive kustomize
+  unarchive:
+    src: "/tmp/{{ kustomize_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install kustomize binary
+  copy:
+    src: "/tmp/kustomize"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get kubeval
+  get_url:
+    url: "{{ kubeval_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive kubeval
+  unarchive:
+    src: "/tmp/{{ kubeval_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install kubeval binary
+  copy:
+    src: "/tmp/kubeval"
+    dest: "{{ binary_path }}"
+    mode: '0755'
