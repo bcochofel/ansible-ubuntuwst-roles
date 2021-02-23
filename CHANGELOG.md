@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="1.1.14"></a>
+## [1.1.14] - 2021-02-23
+### Feat
+- tfsec and checkov tools
+
+### Pull Requests
+- Merge pull request [#31](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/31) from bcochofel/tfsec_checkov
+
+
 <a name="1.1.13"></a>
 ## [1.1.13] - 2021-02-21
 ### Feat
@@ -150,7 +159,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.13...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.14...HEAD
+[1.1.14]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.13...1.1.14
 [1.1.13]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.12...1.1.13
 [1.1.12]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.11...1.1.12
 [1.1.11]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.10...1.1.11
