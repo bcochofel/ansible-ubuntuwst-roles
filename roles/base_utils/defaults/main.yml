@@ -55,3 +55,4 @@ pip_packages:
   - testinfra
   - virtualenvwrapper
   - terraplanfeed
+  - checkov

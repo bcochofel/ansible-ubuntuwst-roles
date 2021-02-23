@@ -87,3 +87,15 @@
     url: "{{ terraform_docs_url }}"
     dest: "{{ binary_path }}/terraform-docs"
     mode: '0755'
+
+- name: Get and install tfsec binary
+  get_url:
+    url: "{{ tfsec_url }}"
+    dest: "{{ binary_path }}/tfsec"
+    mode: '0755'
+
+- name: Get and install tfsec-checkgen binary
+  get_url:
+    url: "{{ tfsec_checkgen_url }}"
+    dest: "{{ binary_path }}/tfsec-checkgen"
+    mode: '0755'
