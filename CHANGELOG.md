@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="1.1.16"></a>
+## [1.1.16] - 2021-02-26
+### Feat
+- calicoctl
+
+### Pull Requests
+- Merge pull request [#33](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/33) from bcochofel/kube_tools_calicoctl
+
+
 <a name="1.1.15"></a>
 ## [1.1.15] - 2021-02-23
 ### Feat
@@ -168,7 +177,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.15...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.16...HEAD
+[1.1.16]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.15...1.1.16
 [1.1.15]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.14...1.1.15
 [1.1.14]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.13...1.1.14
 [1.1.13]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.12...1.1.13
