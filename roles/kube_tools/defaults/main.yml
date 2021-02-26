@@ -37,3 +37,6 @@ kustomize_archive_file: "kustomize_v{{ kustomize_version }}_linux_amd64.tar.gz"
 kubeval_version: 0.15.0
 kubeval_url: "https://github.com/instrumenta/kubeval/releases/download/{{ kubeval_version }}/kubeval-linux-amd64.tar.gz"
 kubeval_archive_file: "kubeval-linux-amd64.tar.gz"
+
+calicoctl_version: 3.18.0
+calicoctl_url: "https://github.com/projectcalico/calicoctl/releases/download/v{{ calicoctl_version }}/calicoctl-linux-amd64"
