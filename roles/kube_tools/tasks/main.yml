@@ -112,3 +112,9 @@
     src: "/tmp/kubeval"
     dest: "{{ binary_path }}"
     mode: '0755'
+
+- name: Get and install calicoctl binary
+  get_url:
+    url: "{{ calicoctl_url }}"
+    dest: "{{ binary_path }}/calicoctl"
+    mode: '0755'
