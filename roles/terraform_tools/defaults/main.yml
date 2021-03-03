@@ -28,3 +28,6 @@ terraform_docs_url: "https://github.com/terraform-docs/terraform-docs/releases/d
 tfsec_version: 0.38.6
 tfsec_url: https://github.com/tfsec/tfsec/releases/download/v{{ tfsec_version }}/tfsec-linux-amd64
 tfsec_checkgen_url: https://github.com/tfsec/tfsec/releases/download/v{{ tfsec_version }}/tfsec-checkgen-linux-amd64
+
+sops_version: 3.6.1
+sops_url: https://github.com/mozilla/sops/releases/download/v{{ sops_version }}/sops-v{{ sops_version }}.linux

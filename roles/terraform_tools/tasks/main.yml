@@ -99,3 +99,9 @@
     url: "{{ tfsec_checkgen_url }}"
     dest: "{{ binary_path }}/tfsec-checkgen"
     mode: '0755'
+
+- name: Get and install sops binary
+  get_url:
+    url: "{{ sops_url }}"
+    dest: "{{ binary_path }}/sops"
+    mode: '0755'
