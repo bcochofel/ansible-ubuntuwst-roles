@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="1.1.17"></a>
+## [1.1.17] - 2021-03-03
+### Feat
+- sops binary
+
+### Pull Requests
+- Merge pull request [#34](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/34) from bcochofel:sops
+
+
 <a name="1.1.16"></a>
 ## [1.1.16] - 2021-02-26
 ### Feat
@@ -177,7 +186,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.16...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.17...HEAD
+[1.1.17]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.16...1.1.17
 [1.1.16]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.15...1.1.16
 [1.1.15]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.14...1.1.15
 [1.1.14]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.13...1.1.14
