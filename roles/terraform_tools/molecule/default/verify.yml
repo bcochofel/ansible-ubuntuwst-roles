@@ -12,6 +12,8 @@
       - conftest
       - terraform-docs
       - tfswitch
+      - tfsec
+      - sops
   tasks:
     - name: Check binaries in path
       command:
