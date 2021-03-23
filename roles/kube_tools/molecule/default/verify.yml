@@ -13,6 +13,9 @@
       - istioctl
       - helm
       - stern
+      - kube-linter
+      - polaris
+      - flux
   tasks:
     - name: Check binaries in path
       command:

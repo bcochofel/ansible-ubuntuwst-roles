@@ -118,3 +118,57 @@
     url: "{{ calicoctl_url }}"
     dest: "{{ binary_path }}/calicoctl"
     mode: '0755'
+
+- name: Get kube-linter
+  get_url:
+    url: "{{ kubelinter_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive kube-linter
+  unarchive:
+    src: "/tmp/{{ kubelinter_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install kube-linter binary
+  copy:
+    src: "/tmp/kube-linter"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get polaris
+  get_url:
+    url: "{{ polaris_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive polaris
+  unarchive:
+    src: "/tmp/{{ polaris_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install polaris binary
+  copy:
+    src: "/tmp/polaris"
+    dest: "{{ binary_path }}"
+    mode: '0755'
+
+- name: Get flux
+  get_url:
+    url: "{{ flux_url }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Unarchive flux
+  unarchive:
+    src: "/tmp/{{ flux_archive_file }}"
+    dest: /tmp
+  delegate_to: localhost
+
+- name: Install flux binary
+  copy:
+    src: "/tmp/flux"
+    dest: "{{ binary_path }}"
+    mode: '0755'
