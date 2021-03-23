@@ -20,7 +20,7 @@ helm_binary_file: "linux-amd64/helm"
 fluxctl_version: 1.21.0
 fluxctl_url: "https://github.com/fluxcd/flux/releases/download/{{ fluxctl_version }}/fluxctl_linux_amd64"
 
-istioctl_version: 1.8.1
+istioctl_version: 1.9.1
 istioctl_url: "https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istioctl-{{ istioctl_version }}-linux-amd64.tar.gz"
 istioctl_archive_file: "istioctl-{{ istioctl_version }}-linux-amd64.tar.gz"
 
@@ -40,3 +40,15 @@ kubeval_archive_file: "kubeval-linux-amd64.tar.gz"
 
 calicoctl_version: 3.18.0
 calicoctl_url: "https://github.com/projectcalico/calicoctl/releases/download/v{{ calicoctl_version }}/calicoctl-linux-amd64"
+
+kubelinter_version: 0.1.6
+kubelinter_url: "https://github.com/stackrox/kube-linter/releases/download/{{ kubelinter_version }}/kube-linter-linux.tar.gz"
+kubelinter_archive_file: "kube-linter-linux.tar.gz"
+
+polaris_version: 3.2.0
+polaris_url: "https://github.com/FairwindsOps/polaris/releases/download/{{ polaris_version }}/polaris_{{ polaris_version }}_linux_amd64.tar.gz"
+polaris_archive_file: "polaris_{{ polaris_version }}_linux_amd64.tar.gz"
+
+flux_version: 0.10.0
+flux_url: "https://github.com/fluxcd/flux2/releases/download/v{{ flux_version }}/flux_{{ flux_version }}_linux_amd64.tar.gz"
+flux_archive_file: "flux_{{ flux_version }}_linux_amd64.tar.gz"
