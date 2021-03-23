@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="1.1.18"></a>
+## [1.1.18] - 2021-03-23
+### Feat
+- kubernetes static analysis tools
+
+### Pull Requests
+- Merge pull request [#35](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/35) from bcochofel/kube_static_analysis
+
+
 <a name="1.1.17"></a>
 ## [1.1.17] - 2021-03-03
 ### Feat
@@ -186,7 +195,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.17...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.18...HEAD
+[1.1.18]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.17...1.1.18
 [1.1.17]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.16...1.1.17
 [1.1.16]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.15...1.1.16
 [1.1.15]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.14...1.1.15
