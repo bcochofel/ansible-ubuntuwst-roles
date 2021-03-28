@@ -172,3 +172,9 @@
     src: "/tmp/flux"
     dest: "{{ binary_path }}"
     mode: '0755'
+
+- name: Get and install kubeseal binary
+  get_url:
+    url: "{{ kubeseal_url }}"
+    dest: "{{ binary_path }}/kubeseal"
+    mode: '0755'

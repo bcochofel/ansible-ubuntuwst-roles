@@ -16,6 +16,7 @@
       - kube-linter
       - polaris
       - flux
+      - kubeseal
   tasks:
     - name: Check binaries in path
       command:
