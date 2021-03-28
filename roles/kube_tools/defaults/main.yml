@@ -52,3 +52,6 @@ polaris_archive_file: "polaris_{{ polaris_version }}_linux_amd64.tar.gz"
 flux_version: 0.10.0
 flux_url: "https://github.com/fluxcd/flux2/releases/download/v{{ flux_version }}/flux_{{ flux_version }}_linux_amd64.tar.gz"
 flux_archive_file: "flux_{{ flux_version }}_linux_amd64.tar.gz"
+
+kubeseal_version: 0.15.0
+kubeseal_url: https://github.com/bitnami-labs/sealed-secrets/releases/download/v{{ kubeseal_version }}/kubeseal-linux-amd64
