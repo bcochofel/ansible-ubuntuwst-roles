@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="1.1.21"></a>
+## [1.1.21] - 2021-04-06
+### Feat
+- bump some kube and tf tools
+
+### Pull Requests
+- Merge pull request [#37](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/37) from bcochofel:bump_kube_tf_tools
+
+
 <a name="1.1.20"></a>
 ## [1.1.20] - 2021-03-28
 ### Feat
@@ -207,7 +216,8 @@
 - Merge pull request [#1](https://github.com/bcochofel/ansible-ubuntuwst-roles/issues/1) from bcochofel/first-commit
 
 
-[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.20...HEAD
+[Unreleased]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.21...HEAD
+[1.1.21]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.20...1.1.21
 [1.1.20]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.19...1.1.20
 [1.1.19]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.18...1.1.19
 [1.1.18]: https://github.com/bcochofel/ansible-ubuntuwst-roles/compare/1.1.17...1.1.18
