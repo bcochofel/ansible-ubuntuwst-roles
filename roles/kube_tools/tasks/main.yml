@@ -26,7 +26,6 @@
   get_url:
     url: "{{ helm_url }}"
     dest: /tmp
-    checksum: "{{ helm_checksum }}"
   delegate_to: localhost
 
 - name: Unarchive helm
@@ -65,11 +64,11 @@
     dest: "{{ binary_path }}"
     mode: '0755'
 
-- name: Get and install Lens AppImage
-  get_url:
-    url: "{{ k8slens_url }}"
-    dest: "{{ binary_path }}"
-    mode: '0755'
+#- name: Get and install Lens AppImage
+#  get_url:
+#    url: "{{ k8slens_url }}"
+#    dest: "{{ binary_path }}"
+#    mode: '0755'
 
 - name: Get and install stern binary
   get_url:
