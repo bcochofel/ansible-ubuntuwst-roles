@@ -70,11 +70,11 @@
 #    dest: "{{ binary_path }}"
 #    mode: '0755'
 
-- name: Get and install stern binary
-  get_url:
-    url: "{{ stern_url }}"
-    dest: "{{ binary_path }}/stern"
-    mode: '0755'
+# - name: Get and install stern binary
+#   get_url:
+#     url: "{{ stern_url }}"
+#     dest: "{{ binary_path }}/stern"
+#     mode: '0755'
 
 - name: Get kustomize
   get_url:
@@ -136,44 +136,44 @@
     dest: "{{ binary_path }}"
     mode: '0755'
 
-- name: Get polaris
-  get_url:
-    url: "{{ polaris_url }}"
-    dest: /tmp
-  delegate_to: localhost
+# - name: Get polaris
+#   get_url:
+#     url: "{{ polaris_url }}"
+#     dest: /tmp
+#   delegate_to: localhost
 
-- name: Unarchive polaris
-  unarchive:
-    src: "/tmp/{{ polaris_archive_file }}"
-    dest: /tmp
-  delegate_to: localhost
+# - name: Unarchive polaris
+#   unarchive:
+#     src: "/tmp/{{ polaris_archive_file }}"
+#     dest: /tmp
+#   delegate_to: localhost
 
-- name: Install polaris binary
-  copy:
-    src: "/tmp/polaris"
-    dest: "{{ binary_path }}"
-    mode: '0755'
+# - name: Install polaris binary
+#   copy:
+#     src: "/tmp/polaris"
+#     dest: "{{ binary_path }}"
+#     mode: '0755'
 
-- name: Get flux
-  get_url:
-    url: "{{ flux_url }}"
-    dest: /tmp
-  delegate_to: localhost
+# - name: Get flux
+#   get_url:
+#     url: "{{ flux_url }}"
+#     dest: /tmp
+#   delegate_to: localhost
 
-- name: Unarchive flux
-  unarchive:
-    src: "/tmp/{{ flux_archive_file }}"
-    dest: /tmp
-  delegate_to: localhost
+# - name: Unarchive flux
+#   unarchive:
+#     src: "/tmp/{{ flux_archive_file }}"
+#     dest: /tmp
+#   delegate_to: localhost
 
-- name: Install flux binary
-  copy:
-    src: "/tmp/flux"
-    dest: "{{ binary_path }}"
-    mode: '0755'
+# - name: Install flux binary
+#   copy:
+#     src: "/tmp/flux"
+#     dest: "{{ binary_path }}"
+#     mode: '0755'
 
-- name: Get and install kubeseal binary
-  get_url:
-    url: "{{ kubeseal_url }}"
-    dest: "{{ binary_path }}/kubeseal"
-    mode: '0755'
+# - name: Get and install kubeseal binary
+#   get_url:
+#     url: "{{ kubeseal_url }}"
+#     dest: "{{ binary_path }}/kubeseal"
+#     mode: '0755'

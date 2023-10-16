@@ -2,55 +2,55 @@
 # defaults file for kube_tools
 binary_path: /usr/local/bin/
 
-kubectl_version: 1.20.0
+kubectl_version: 1.28.0
 kubectl_url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
 
-kubectx_version: 0.9.1
+kubectx_version: 0.9.5
 kubectx_url: "https://github.com/ahmetb/kubectx/releases/download/v{{ kubectx_version }}/kubectx"
 
-kubens_version: 0.9.1
+kubens_version: 0.9.5
 kubens_url: "https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_version }}/kubens"
 
-helm_version: 3.5.3
+helm_version: 3.13.1
 helm_url: "https://get.helm.sh/helm-v{{ helm_version }}-linux-amd64.tar.gz"
 helm_archive_file: "helm-v{{ helm_version }}-linux-amd64.tar.gz"
 helm_binary_file: "linux-amd64/helm"
 
-fluxctl_version: 1.22.1
+fluxctl_version: 1.25.4
 fluxctl_url: "https://github.com/fluxcd/flux/releases/download/{{ fluxctl_version }}/fluxctl_linux_amd64"
 
-istioctl_version: 1.9.2
+istioctl_version: 1.19.0
 istioctl_url: "https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istioctl-{{ istioctl_version }}-linux-amd64.tar.gz"
 istioctl_archive_file: "istioctl-{{ istioctl_version }}-linux-amd64.tar.gz"
 
-k8slens_version: 4.0.6
-k8slens_url: "https://github.com/lensapp/lens/releases/download/v{{ k8slens_version }}/Lens-{{ k8slens_version }}.AppImage"
+# k8slens_version: 4.0.6
+# k8slens_url: "https://github.com/lensapp/lens/releases/download/v{{ k8slens_version }}/Lens-{{ k8slens_version }}.AppImage"
 
-stern_version: 1.11.0
+stern_version: 1.26.0
 stern_url: "https://github.com/wercker/stern/releases/download/{{ stern_version }}/stern_linux_amd64"
 
-kustomize_version: 4.0.5
+kustomize_version: 5.1.1
 kustomize_url: "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv{{ kustomize_version }}/kustomize_v{{ kustomize_version }}_linux_amd64.tar.gz"
 kustomize_archive_file: "kustomize_v{{ kustomize_version }}_linux_amd64.tar.gz"
 
-kubeval_version: 0.15.0
+kubeval_version: 0.16.1
 kubeval_url: "https://github.com/instrumenta/kubeval/releases/download/{{ kubeval_version }}/kubeval-linux-amd64.tar.gz"
 kubeval_archive_file: "kubeval-linux-amd64.tar.gz"
 
-calicoctl_version: 3.18.0
+calicoctl_version: 3.20.6
 calicoctl_url: "https://github.com/projectcalico/calicoctl/releases/download/v{{ calicoctl_version }}/calicoctl-linux-amd64"
 
-kubelinter_version: 0.1.6
+kubelinter_version: 0.6.4
 kubelinter_url: "https://github.com/stackrox/kube-linter/releases/download/{{ kubelinter_version }}/kube-linter-linux.tar.gz"
 kubelinter_archive_file: "kube-linter-linux.tar.gz"
 
-polaris_version: 3.2.0
-polaris_url: "https://github.com/FairwindsOps/polaris/releases/download/{{ polaris_version }}/polaris_{{ polaris_version }}_linux_amd64.tar.gz"
-polaris_archive_file: "polaris_{{ polaris_version }}_linux_amd64.tar.gz"
+# polaris_version: 3.2.0
+# polaris_url: "https://github.com/FairwindsOps/polaris/releases/download/{{ polaris_version }}/polaris_{{ polaris_version }}_linux_amd64.tar.gz"
+# polaris_archive_file: "polaris_{{ polaris_version }}_linux_amd64.tar.gz"
 
-flux_version: 0.11.0
-flux_url: "https://github.com/fluxcd/flux2/releases/download/v{{ flux_version }}/flux_{{ flux_version }}_linux_amd64.tar.gz"
-flux_archive_file: "flux_{{ flux_version }}_linux_amd64.tar.gz"
+# flux_version: 0.11.0
+# flux_url: "https://github.com/fluxcd/flux2/releases/download/v{{ flux_version }}/flux_{{ flux_version }}_linux_amd64.tar.gz"
+# flux_archive_file: "flux_{{ flux_version }}_linux_amd64.tar.gz"
 
-kubeseal_version: 0.15.0
-kubeseal_url: https://github.com/bitnami-labs/sealed-secrets/releases/download/v{{ kubeseal_version }}/kubeseal-linux-amd64
+# kubeseal_version: 0.15.0
+# kubeseal_url: https://github.com/bitnami-labs/sealed-secrets/releases/download/v{{ kubeseal_version }}/kubeseal-linux-amd64
