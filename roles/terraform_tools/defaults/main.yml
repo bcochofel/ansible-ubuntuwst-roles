@@ -2,32 +2,32 @@
 # defaults file for terraform_tools
 binary_path: /usr/local/bin/
 
-terraform_version: 0.14.9
+terraform_version: 1.6.1
 terraform_url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip"
 terraform_archive_file: "terraform_{{ terraform_version }}_linux_amd64.zip"
 
-terragrunt_version: 0.28.18
+terragrunt_version: 0.52.3
 terragrunt_url: "https://github.com/gruntwork-io/terragrunt/releases/download/v{{ terragrunt_version }}/terragrunt_linux_amd64"
 
-opa_version: 0.26.0
+opa_version: 0.57.0
 opa_url: "https://github.com/open-policy-agent/opa/releases/download/v{{ opa_version }}/opa_linux_amd64"
 
-conftest_version: 0.23.0
+conftest_version: 0.46.0
 conftest_deb_url: "https://github.com/open-policy-agent/conftest/releases/download/v{{ conftest_version }}/conftest_{{ conftest_version }}_linux_amd64.deb"
 
-tflint_version: 0.26.0
+tflint_version: 0.47.0
 tflint_url: "https://github.com/terraform-linters/tflint/releases/download/v{{ tflint_version }}/tflint_linux_amd64.zip"
 tflint_archive_file: "tflint_linux_amd64.zip"
-tflint_azurerm_ruleset_version: 0.9.0
+tflint_azurerm_ruleset_version: 0.25.1
 tflint_azurerm_ruleset_url: https://github.com/terraform-linters/tflint-ruleset-azurerm/releases/download/v{{ tflint_azurerm_ruleset_version }}/tflint-ruleset-azurerm_linux_amd64.zip
 tflint_azurerm_ruleset_archive_file: "tflint-ruleset-azurerm_linux_amd64.zip"
 
-terraform_docs_version: 0.12.1
+terraform_docs_version: 0.16.0
 terraform_docs_url: "https://github.com/terraform-docs/terraform-docs/releases/download/v{{ terraform_docs_version }}/terraform-docs-v{{ terraform_docs_version }}-linux-amd64"
 
-tfsec_version: 0.39.20
+tfsec_version: 1.28.4
 tfsec_url: https://github.com/tfsec/tfsec/releases/download/v{{ tfsec_version }}/tfsec-linux-amd64
 tfsec_checkgen_url: https://github.com/tfsec/tfsec/releases/download/v{{ tfsec_version }}/tfsec-checkgen-linux-amd64
 
-sops_version: 3.7.0
-sops_url: https://github.com/mozilla/sops/releases/download/v{{ sops_version }}/sops-v{{ sops_version }}.linux
+sops_version: 3.8.1
+sops_url: https://github.com/getsops/sops/releases/download/v{{ sops_version }}/sops-v{{ sops_version }}.linux
